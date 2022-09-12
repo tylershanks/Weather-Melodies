@@ -1,6 +1,6 @@
 
-    // given the gmt timestamp of hours, minutes, and our current time given from the api response,
-  // we convert the time to seconds (so we can apply the api's time zone adjustment) then back to hours and minutes
+  // given the gmt timestamp of hours, minutes, and our current time given from the api response,
+    // we convert the time to seconds (so we can apply the api's time zone adjustment) then back to hours and minutes
   let convertTime = (gmtTimeStampHours, gmtTimeStampMinutes, responseTime) => {
     //if seconds of gmt < |response time|, do 86,400-gmt as gmt
     let secondsOfGMT = ((gmtTimeStampHours*60)+gmtTimeStampMinutes)*60

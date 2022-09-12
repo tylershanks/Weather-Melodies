@@ -12,14 +12,15 @@ let createNewSearchString = (responseTemperature, responseWeather, gmtTimeStampH
 
     // hot or cold
     let searchStringTemp = ''
-    // whatever weather they give us
-    let searchStringWeather = responseWeather
     // morning, afternoon, night
     let searchStringTime = ''
-    // whatever country code they give us
-    let searchStringCountry = responseCountryCode
     // city we searched
     let searchStringCity = responseCurrentLocation
+    
+    // whatever weather they give us
+    let searchStringWeather = responseWeather
+    // whatever country code they give us
+    let searchStringCountry = responseCountryCode
 
     if (responseTemperature > 283){
       searchStringTemp = 'hot'

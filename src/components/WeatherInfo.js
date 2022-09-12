@@ -14,6 +14,8 @@ export default function WeatherInfo({responseCurrentLocation, responseWeather, r
 
     // this useEffect fires when we get a new response, it changes the time associated with the location
     useEffect(() => {
+        setGmtTimeStampHours(new Date().getUTCHours())
+        setGmtTimeStampMinutes(new Date().getUTCMinutes())
         if(responseTime === undefined){
             return console.log('response time undefined rn')
         }else{
@@ -32,7 +34,6 @@ export default function WeatherInfo({responseCurrentLocation, responseWeather, r
 
   return (
     <div>
-        <> | </>
       <>{responseCurrentLocation}</>
       <> | </>
       <>{responseWeather}</>
@@ -40,7 +41,6 @@ export default function WeatherInfo({responseCurrentLocation, responseWeather, r
       <>{convertedTime}</>
       <> | </>
       <>{convertedTemperature}</>
-      <> | </>
     </div>
   )
 }

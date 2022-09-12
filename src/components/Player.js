@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from 'react';
-
-// import React from "react";
 import SpotifyPlayer from "react-spotify-web-playback";
 
 export default function Player ({ accessToken, songInfo }) {
-    if (!accessToken) return null
+    if (!accessToken || !songInfo) return null
     return (
         <SpotifyPlayer 
             token={accessToken}
